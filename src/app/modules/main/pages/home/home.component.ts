@@ -228,31 +228,31 @@ export class HomeComponent implements OnInit, AfterViewInit  {
   // select product for a quick view 
   selectProduct(product:any){
     this.selected_product=product;
-    this.getShopInfo(product.shop_reference);
+   // this.getShopInfo(product.shop_reference);
 
   }
 
   // get shop info 
-  shopInfo:any;
-  getShopInfo(id:any){
-    this.productService.getShopById(id).subscribe(
-      res=>{
-        this.shopInfo=res;
+  // shopInfo:any;
+  // getShopInfo(id:any){
+  //   this.productService.getShopById(id).subscribe(
+  //     res=>{
+  //       this.shopInfo=res;
 
-        // active modal 
-        // Simule un clic sur le bouton pour déclencher le modal
-        const modalElement = document.getElementById('ModalQuickview');
-        if (modalElement) {
-          const bootstrapModal = new (window as any).bootstrap.Modal(modalElement);
-          bootstrapModal.show();
-        }
-      },
-      error=>{
-        console.log(error);
-      }
-    );
+  //       // active modal 
+  //       // Simule un clic sur le bouton pour déclencher le modal
+  //       const modalElement = document.getElementById('ModalQuickview');
+  //       if (modalElement) {
+  //         const bootstrapModal = new (window as any).bootstrap.Modal(modalElement);
+  //         bootstrapModal.show();
+  //       }
+  //     },
+  //     error=>{
+  //       console.log(error);
+  //     }
+  //   );
 
-  }
+  // }
 
   // get product for detail page 
 
