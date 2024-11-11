@@ -1,0 +1,203 @@
+
+
+<!--  Start navbar  -->
+<nav class="navbar navbar-expand-lg navbar-dark tc-navbar-style4">
+    <div class="container text text-dark">
+        <a class="navbar-brand" href="#">
+            <img src="assets/home1/img/logo.png"  class="logo-img" alt="Logo" >
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="search-cat d-none d-lg-block">
+            <div class="input-group">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search anything...">
+                    <a href="#" class="search-btn"> <i class="fal fa-search"></i> </a>
+                </div>
+                <select name="name" class="form-select">
+                    <option value=""> All Categories </option>
+                    <option value=""> Categories 1 </option>
+                    <option value=""> Categories 2 </option>
+                </select>
+            </div>
+        </div>
+        <div class="side-nav d-none d-lg-flex">
+            <div class="icons">
+                <a href="#" class="icon-link"> <i class="las la-sync-alt"></i> </a>
+                <a href="#" class="icon-link"> <i class="lar la-heart"></i> </a>
+                <a href="#" class="icon-link"> <i class="las la-user"></i> </a>
+            </div>
+            <div class="text-item ms-3">
+                <small class="fsz-11 text-uppercase d-block"> welcome </small>
+                <a href="../inner_pages/login.html" class="fsz-14 text-uppercase fw-bold"> log in / Register </a>
+            </div>
+            <div class="icons ms-4">
+                <a href="#" class="icon-link"> <i class="las la-shopping-bag"></i> <span class="num">5</span> </a>
+            </div>
+            <div class="text-item ms-3">
+                <small class="fsz-11 text-uppercase d-block"> cart </small>
+                <a href="#" class="fsz-14 text-uppercase fw-bold"> $1,689.00 </a>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="navbar navbar-expand-lg navbar-dark tc-navbar-style4 nav-links py-0">
+    <div class="container">
+        <div class="cat-list order-last order-lg-first">
+            <a role="button" (click)="showCat()" class="list-btn"> <i class="fal fa-bars me-2"></i> <span> List Categorie </span> <i class="fal fa-chevron-down ms-5 arrow"></i> </a>
+            <ul *ngIf="show_widget==true" class="list-card active">
+                <li *ngFor="let item of categories">
+                     <a href="../inner_pages/products.html"> {{item.name}} <span class="arrow"> <i class="fal fa-chevron-right ms-4"></i> </span> </a> 
+                    
+                </li>
+                
+            </ul>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="search-cat d-block d-lg-none my-4">
+                <div class="input-group">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search anything...">
+                        <a href="#" class="search-btn"> <i class="fal fa-search"></i> </a>
+                    </div>
+                    <select name="name" class="form-select">
+                        <option value=""> All Categories </option>
+                        <option value=""> Categories 1 </option>
+                        <option value=""> Categories 2 </option>
+                    </select>
+                </div>
+            </div>
+            <div class="links ms-0 me-auto">
+                <ul>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Homes
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                            <li><a class="dropdown-item" href="../home_baby/index.html">Home Baby</a></li>
+                            <li><a class="dropdown-item" href="../home_electronic/index.html">Home Electronic</a></li>
+                            <li><a class="dropdown-item" href="../home_lighting/index.html">Home Lighting</a></li>
+                            <li><a class="dropdown-item" href="../home_pets/index.html">Home Pets</a></li>
+                            <li><a class="dropdown-item" href="../home_tech/index.html">Home Tech</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Pages
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                            <li><a class="dropdown-item" href="../inner_pages/about.html">About</a></li>
+                            <li><a class="dropdown-item" href="../inner_pages/contact.html">Contact</a></li>
+                            <li><a class="dropdown-item" href="../inner_pages/login.html">Login</a></li>
+                            <li><a class="dropdown-item" href="../inner_pages/profile.html">Profile</a></li>
+                            <li><a class="dropdown-item" href="../inner_pages/register.html">Register</a></li>
+                        </ul>
+                    </li> 
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Products
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown3">
+                            <li><a class="dropdown-item" href="../inner_pages/products.html">products</a></li>
+                            <li><a class="dropdown-item" href="../inner_pages/products_layout_2.html">products layout 2</a></li>
+                            <li><a class="dropdown-item" href="../inner_pages/cart.html">Cart</a></li>
+                            <li><a class="dropdown-item" href="../inner_pages/checkout.html">Checkout</a></li>
+                            <li><a class="dropdown-item" href="../inner_pages/single_product.html">Single Product</a></li>
+                            <li><a class="dropdown-item" href="../inner_pages/single_product_pay.html">Single Product Pay</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="hotline-side">
+                <div class="hotline border border-light1 py-2 px-3 rounded-pill">
+                    <span class="icon me-1"> <i class="las la-tty"></i> </span>
+                    <small class="fsz-12 me-1"> Hotline 24/7 </small>
+                    <a href="tel:002538862516" class="fsz-13 fw-bold"> (025) 3886 25 16 </a>
+                </div>
+            </div>
+            <div class="links lang-links">
+                <ul class="links-ul">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" href="#"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="la la-dollar-sign me-1"></i> USD
+                        </a>
+                        <ul class="dropdown-menu" >
+                          <li><a class="dropdown-item" href="#">USD</a></li>
+                          <li><a class="dropdown-item" href="#">USD</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" href="#"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="assets/home4/img/eng.png" alt="" class="me-2 icon-15"> Eng
+                        </a>
+                        <ul class="dropdown-menu" >
+                          <li><a class="dropdown-item" href="#">Arabic</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--  End navbar  -->
+
+
+<!--  Start header  -->
+<header class="tc-header-style4">
+    <div class="container">
+        <div class="row justify-content-end gx-0">
+            <div class="col-lg-9">
+                <div class="header-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="slider-card">
+                                <div class="row align-items-end">
+                                    <div class="col-lg-5">
+                                        <div class="info">
+                                            <h3> Cybex Stroller with <br> Same Price  </h3>
+                                            <h2 class="price"> $259 </h2>
+                                            <div class="text"> Super offer from cybex <br> stroller and more. Promotion program <br> will end of <span class="color-cyan2"> July 15, 2023 </span> </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-7">
+                                        <div class="img">
+                                            <img src="assets/home4/img/head1.png" alt="" class="img-contain">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slider-card">
+                                <div class="row align-items-center">
+                                    <div class="col-lg-5">
+                                        <div class="info">
+                                            <h6 class="fsz-18 fw-bold mb-15"> Bobolax </h6>
+                                            <h3 class="fsz-35 fw-400"> <strong class="fw-700"> Nutri 7-In-1 </strong> Base On Formula 400g  </h3>
+                                            <div class="text mt-20"> Lorem ispum dolor sit <br> amet photo </div>
+                                            <a href="../inner_pages/single_product.html" class="butn bg-cyan2 text-white radius-3 fw-600 text-uppercase mt-30"> <span> Shop Now </span> </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-7">
+                                        <div class="img">
+                                            <img src="assets/home4/img/head2.png" alt="" class="img-contain">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!--  Start header  -->

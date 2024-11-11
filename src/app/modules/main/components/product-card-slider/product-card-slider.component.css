@@ -1,0 +1,9 @@
+.title-name {
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limite à 2 lignes */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 3em; /* Ajustez en fonction de la hauteur de ligne */
+    line-height: 1.5em; /* Hauteur de ligne pour un rendu cohérent */
+}
